@@ -10,6 +10,7 @@ impl Display for DebugPrintable {
     }
 }
 
+#[allow(dead_code)]
 #[derive(Debug)]
 struct Complex {
     real: f64,
@@ -27,12 +28,12 @@ mod tests {
     use crate::debug_print_example::{Complex, DebugPrintable};
 
     #[test]
-    fn test(){
+    fn test() {
         let printable = DebugPrintable(12);
         println!("Display: {}", printable);
         println!("DebugPrintable: {:#?}", printable);
 
-        let complex = Complex{
+        let complex = Complex {
             real: 3.3,
             imag: 7.2,
         };
